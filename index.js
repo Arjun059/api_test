@@ -2,15 +2,7 @@ const express = require("express");
 const app = express()
 
 
-app.get("/hello", (req, res) => {
-    res.send("hello You")
-})
+const testRoutes = require("./routes/test.js")
+app.use("/api/", testRoutes)
 
-app.get("/test", (req, res) => {  
-    res.send("Testing ")
-})
- 
-
-app.listen(8000, () => {
-
-})
+app.listen(8000, () => { })
