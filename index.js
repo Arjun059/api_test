@@ -5,7 +5,7 @@ const app = express()
 const testRoutes = require("./routes/test.js")
 app.use("/api/", testRoutes)
 
-app.app("*", (req, res) => {    
+app.all("*", (req, res) => {    
 
   res.send("api route get ")
 
