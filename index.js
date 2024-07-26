@@ -3,8 +3,11 @@ const app = express();
 
 const testRoutes = require('./routes/test.js');
 app.use('/api/',
-  
-  testRoutes);
+
+
+
+
+testRoutes);
 
 app.app('*', (req, res) => {
   res.send('api route get ');
