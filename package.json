@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint-staged": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "format": "npx prettier --write ."
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,20 +15,13 @@
     "query-string": "^8.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
     "husky": "^9.1.2",
-    "lint-staged": "^15.2.7",
-    "pre-commit": "^1.2.2",
-    "prettier": "^3.3.3",
-    "pretty-quick": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "lint-staged": "^15.2.7"
   },
   "lint-staged": {
-    "*.js": "eslint",
-    "*.css": "stylelint"
-  },
-  "pre-commit": "lint-staged"
+  "*.js": "eslint --fix"
+  }
 }
